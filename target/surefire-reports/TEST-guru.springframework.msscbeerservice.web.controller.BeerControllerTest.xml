@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report.xsd" name="guru.springframework.msscbeerservice.DemoApplicationTests" time="14.032" tests="1" errors="0" skipped="0" failures="0">
+<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report.xsd" name="guru.springframework.msscbeerservice.web.controller.BeerControllerTest" time="2.857" tests="3" errors="0" skipped="0" failures="2">
   <properties>
     <property name="sun.desktop" value="windows"/>
     <property name="awt.toolkit" value="sun.awt.windows.WToolkit"/>
@@ -60,5 +60,115 @@
     <property name="sun.io.unicode.encoding" value="UnicodeLittle"/>
     <property name="java.class.version" value="55.0"/>
   </properties>
-  <testcase name="contextLoads" classname="guru.springframework.msscbeerservice.DemoApplicationTests" time="0.201"/>
+  <testcase name="updateBeerById" classname="guru.springframework.msscbeerservice.web.controller.BeerControllerTest" time="0.906">
+    <failure message="Status expected:&lt;204&gt; but was:&lt;400&gt;" type="java.lang.AssertionError"><![CDATA[java.lang.AssertionError: Status expected:<204> but was:<400>
+	at guru.springframework.msscbeerservice.web.controller.BeerControllerTest.updateBeerById(BeerControllerTest.java:51)
+]]></failure>
+    <system-out><![CDATA[2020-04-28 11:19:59.108  INFO 22484 --- [           main] .b.t.a.w.s.WebMvcTestContextBootstrapper : Neither @ContextConfiguration nor @ContextHierarchy found for test class [guru.springframework.msscbeerservice.web.controller.BeerControllerTest], using SpringBootContextLoader
+2020-04-28 11:19:59.109  INFO 22484 --- [           main] o.s.t.c.support.AbstractContextLoader    : Could not detect default resource locations for test class [guru.springframework.msscbeerservice.web.controller.BeerControllerTest]: no resource found for suffixes {-context.xml, Context.groovy}.
+2020-04-28 11:19:59.109  INFO 22484 --- [           main] t.c.s.AnnotationConfigContextLoaderUtils : Could not detect default configuration classes for test class [guru.springframework.msscbeerservice.web.controller.BeerControllerTest]: BeerControllerTest does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+2020-04-28 11:19:59.182  INFO 22484 --- [           main] .b.t.c.SpringBootTestContextBootstrapper : Found @SpringBootConfiguration guru.springframework.msscbeerservice.DemoApplication for test class guru.springframework.msscbeerservice.web.controller.BeerControllerTest
+2020-04-28 11:19:59.182  INFO 22484 --- [           main] .b.t.a.w.s.WebMvcTestContextBootstrapper : Loaded default TestExecutionListener class names from location [META-INF/spring.factories]: [org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener, org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener, org.springframework.test.context.web.ServletTestExecutionListener, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener, org.springframework.test.context.support.DependencyInjectionTestExecutionListener, org.springframework.test.context.support.DirtiesContextTestExecutionListener, org.springframework.test.context.transaction.TransactionalTestExecutionListener, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener, org.springframework.test.context.event.EventPublishingTestExecutionListener]
+2020-04-28 11:19:59.183  INFO 22484 --- [           main] .b.t.a.w.s.WebMvcTestContextBootstrapper : Using TestExecutionListeners: [org.springframework.test.context.web.ServletTestExecutionListener@535aa7c7, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener@578781f7, org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener@7bbd944e, org.springframework.boot.test.autoconfigure.SpringBootDependencyInjectionTestExecutionListener@22e253c7, org.springframework.test.context.support.DirtiesContextTestExecutionListener@2480acc3, org.springframework.test.context.transaction.TransactionalTestExecutionListener@4fe3199d, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener@58ebfbcb, org.springframework.test.context.event.EventPublishingTestExecutionListener@68a7f77a, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener@4960b819, org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener@1e987f59, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener@192aeae2, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener@4ee1c29a, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener@28d1b2f]
+
+  .   ____          _            __ _ _
+ /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
+( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
+ \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
+  '  |____| .__|_| |_|_| |_\__, | / / / /
+ =========|_|==============|___/=/_/_/_/
+ :: Spring Boot ::        (v2.2.6.RELEASE)
+
+2020-04-28 11:19:59.275  INFO 22484 --- [           main] g.s.m.web.controller.BeerControllerTest  : Starting BeerControllerTest on LT-1XTX3H2 with PID 22484 (started by BennettA in c:\Users\bennetta\VS_Code_Repository\Udemy-Microservices\mssc-beer-service)
+2020-04-28 11:19:59.278  INFO 22484 --- [           main] g.s.m.web.controller.BeerControllerTest  : No active profile set, falling back to default profiles: default
+2020-04-28 11:19:59.958  INFO 22484 --- [           main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2020-04-28 11:20:00.311  INFO 22484 --- [           main] o.s.b.t.m.w.SpringBootMockServletContext : Initializing Spring TestDispatcherServlet ''
+2020-04-28 11:20:00.314  INFO 22484 --- [           main] o.s.t.web.servlet.TestDispatcherServlet  : Initializing Servlet ''
+2020-04-28 11:20:00.340  INFO 22484 --- [           main] o.s.t.web.servlet.TestDispatcherServlet  : Completed initialization in 26 ms
+2020-04-28 11:20:00.363  INFO 22484 --- [           main] g.s.m.web.controller.BeerControllerTest  : Started BeerControllerTest in 1.177 seconds (JVM running for 16.998)
+2020-04-28 11:20:00.858  WARN 22484 --- [           main] .w.s.m.s.DefaultHandlerExceptionResolver : Resolved [org.springframework.web.bind.MethodArgumentNotValidException: Validation failed for argument [1] in public org.springframework.http.ResponseEntity guru.springframework.msscbeerservice.web.controller.BeerController.updateBeerById(java.util.UUID,guru.springframework.msscbeerservice.web.model.BeerDto) with 4 errors: [Field error in object 'beerDto' on field 'price': rejected value [null]; codes [NotNull.beerDto.price,NotNull.price,NotNull.java.math.BigDecimal,NotNull]; arguments [org.springframework.context.support.DefaultMessageSourceResolvable: codes [beerDto.price,price]; arguments []; default message [price]]; default message [must not be null]] [Field error in object 'beerDto' on field 'upc': rejected value [null]; codes [NotNull.beerDto.upc,NotNull.upc,NotNull.java.lang.Long,NotNull]; arguments [org.springframework.context.support.DefaultMessageSourceResolvable: codes [beerDto.upc,upc]; arguments []; default message [upc]]; default message [must not be null]] [Field error in object 'beerDto' on field 'beerName': rejected value [null]; codes [NotBlank.beerDto.beerName,NotBlank.beerName,NotBlank.java.lang.String,NotBlank]; arguments [org.springframework.context.support.DefaultMessageSourceResolvable: codes [beerDto.beerName,beerName]; arguments []; default message [beerName]]; default message [must not be blank]] [Field error in object 'beerDto' on field 'beerStyle': rejected value [null]; codes [NotNull.beerDto.beerStyle,NotNull.beerStyle,NotNull.guru.springframework.msscbeerservice.web.model.BeerStyleEnum,NotNull]; arguments [org.springframework.context.support.DefaultMessageSourceResolvable: codes [beerDto.beerStyle,beerStyle]; arguments []; default message [beerStyle]]; default message [must not be null]] ]
+
+MockHttpServletRequest:
+      HTTP Method = PUT
+      Request URI = /api/v1/beer/a406f9f6-005b-4383-8185-1045b1606b75
+       Parameters = {}
+          Headers = [Content-Type:"application/json", Content-Length:"148"]
+             Body = <no character encoding set>
+    Session Attrs = {}
+
+Handler:
+             Type = guru.springframework.msscbeerservice.web.controller.BeerController
+           Method = guru.springframework.msscbeerservice.web.controller.BeerController#updateBeerById(UUID, BeerDto)
+
+Async:
+    Async started = false
+     Async result = null
+
+Resolved Exception:
+             Type = org.springframework.web.bind.MethodArgumentNotValidException
+
+ModelAndView:
+        View name = null
+             View = null
+            Model = null
+
+FlashMap:
+       Attributes = null
+
+MockHttpServletResponse:
+           Status = 400
+    Error message = null
+          Headers = []
+     Content type = null
+             Body = 
+    Forwarded URL = null
+   Redirected URL = null
+          Cookies = []
+]]></system-out>
+  </testcase>
+  <testcase name="saveNewBeer" classname="guru.springframework.msscbeerservice.web.controller.BeerControllerTest" time="0.484">
+    <failure message="Status expected:&lt;201&gt; but was:&lt;400&gt;" type="java.lang.AssertionError"><![CDATA[java.lang.AssertionError: Status expected:<201> but was:<400>
+	at guru.springframework.msscbeerservice.web.controller.BeerControllerTest.saveNewBeer(BeerControllerTest.java:40)
+]]></failure>
+    <system-out><![CDATA[2020-04-28 11:20:00.907  WARN 22484 --- [           main] .w.s.m.s.DefaultHandlerExceptionResolver : Resolved [org.springframework.web.bind.MethodArgumentNotValidException: Validation failed for argument [0] in public org.springframework.http.ResponseEntity guru.springframework.msscbeerservice.web.controller.BeerController.saveNewBeer(guru.springframework.msscbeerservice.web.model.BeerDto) with 4 errors: [Field error in object 'beerDto' on field 'upc': rejected value [null]; codes [NotNull.beerDto.upc,NotNull.upc,NotNull.java.lang.Long,NotNull]; arguments [org.springframework.context.support.DefaultMessageSourceResolvable: codes [beerDto.upc,upc]; arguments []; default message [upc]]; default message [must not be null]] [Field error in object 'beerDto' on field 'price': rejected value [null]; codes [NotNull.beerDto.price,NotNull.price,NotNull.java.math.BigDecimal,NotNull]; arguments [org.springframework.context.support.DefaultMessageSourceResolvable: codes [beerDto.price,price]; arguments []; default message [price]]; default message [must not be null]] [Field error in object 'beerDto' on field 'beerName': rejected value [null]; codes [NotBlank.beerDto.beerName,NotBlank.beerName,NotBlank.java.lang.String,NotBlank]; arguments [org.springframework.context.support.DefaultMessageSourceResolvable: codes [beerDto.beerName,beerName]; arguments []; default message [beerName]]; default message [must not be blank]] [Field error in object 'beerDto' on field 'beerStyle': rejected value [null]; codes [NotNull.beerDto.beerStyle,NotNull.beerStyle,NotNull.guru.springframework.msscbeerservice.web.model.BeerStyleEnum,NotNull]; arguments [org.springframework.context.support.DefaultMessageSourceResolvable: codes [beerDto.beerStyle,beerStyle]; arguments []; default message [beerStyle]]; default message [must not be null]] ]
+
+MockHttpServletRequest:
+      HTTP Method = POST
+      Request URI = /api/v1/beer/
+       Parameters = {}
+          Headers = [Content-Type:"application/json", Content-Length:"148"]
+             Body = <no character encoding set>
+    Session Attrs = {}
+
+Handler:
+             Type = guru.springframework.msscbeerservice.web.controller.BeerController
+           Method = guru.springframework.msscbeerservice.web.controller.BeerController#saveNewBeer(BeerDto)
+
+Async:
+    Async started = false
+     Async result = null
+
+Resolved Exception:
+             Type = org.springframework.web.bind.MethodArgumentNotValidException
+
+ModelAndView:
+        View name = null
+             View = null
+            Model = null
+
+FlashMap:
+       Attributes = null
+
+MockHttpServletResponse:
+           Status = 400
+    Error message = null
+          Headers = []
+     Content type = null
+             Body = 
+    Forwarded URL = null
+   Redirected URL = null
+          Cookies = []
+]]></system-out>
+  </testcase>
+  <testcase name="getBeerById" classname="guru.springframework.msscbeerservice.web.controller.BeerControllerTest" time="0"/>
 </testsuite>
