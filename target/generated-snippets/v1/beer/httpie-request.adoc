@@ -1,0 +1,5 @@
+[source,bash]
+----
+$ http GET 'http://localhost:8080/api/v1/beer/60d091fe-3f44-4497-9a6a-a3f793cd7085?isCold=yes' \
+    'Accept:application/json'
+----
