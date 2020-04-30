@@ -1,0 +1,4 @@
+[source,options="nowrap"]
+----
+{"id":null,"version":null,"createdDate":null,"lastModifiedDate":null,"beerName":"Punk IPA","beerStyle":"IPA","upc":123123123123,"price":3.9900000000000002131628207280300557613372802734375,"quantityOnHand":200}
+----

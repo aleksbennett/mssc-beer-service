@@ -1,0 +1,9 @@
+[source,http,options="nowrap"]
+----
+POST /api/v1/beer/ HTTP/1.1
+Content-Type: application/json
+Content-Length: 209
+Host: localhost:8080
+
+{"id":null,"version":null,"createdDate":null,"lastModifiedDate":null,"beerName":"Punk IPA","beerStyle":"IPA","upc":123123123123,"price":3.9900000000000002131628207280300557613372802734375,"quantityOnHand":200}
+----
