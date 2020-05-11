@@ -1,3 +1,4 @@
 guru\springframework\msscbeerservice\DemoApplicationTests.class
 guru\springframework\msscbeerservice\web\controller\BeerControllerTest$ConstrainedFields.class
 guru\springframework\msscbeerservice\web\controller\BeerControllerTest.class
+guru\springframework\msscbeerservice\web\model\BeerDtoTest.class
