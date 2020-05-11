@@ -10,30 +10,31 @@ import org.springframework.boot.test.mock.mockito.MockBean;
 import org.springframework.context.annotation.ComponentScan;
 import org.springframework.http.MediaType;
 import org.springframework.restdocs.RestDocumentationExtension;
-import org.springframework.restdocs.constraints.ConstraintDescriptions;
-import org.springframework.restdocs.payload.FieldDescriptor;
 import org.springframework.test.web.servlet.MockMvc;
-import org.springframework.util.StringUtils;
 
 import java.math.BigDecimal;
-import java.util.Optional;
 import java.util.UUID;
 
 import static org.mockito.ArgumentMatchers.any;
 import static org.mockito.ArgumentMatchers.anyBoolean;
 import static org.mockito.BDDMockito.given;
-import static org.springframework.restdocs.mockmvc.MockMvcRestDocumentation.document;
 import static org.springframework.restdocs.mockmvc.RestDocumentationRequestBuilders.*;
-import static org.springframework.restdocs.payload.PayloadDocumentation.*;
-import static org.springframework.restdocs.request.RequestDocumentation.*;
-import static org.springframework.restdocs.snippet.Attributes.key;
 import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.status;
-
 import guru.springframework.msscbeerservice.bootstrap.BeerLoader;
-import guru.springframework.msscbeerservice.domain.Beer;
 import guru.springframework.msscbeerservice.services.BeerService;
 import guru.springframework.msscbeerservice.web.model.BeerDto;
 import guru.springframework.msscbeerservice.web.model.BeerStyleEnum;
+
+/*
+import org.springframework.util.StringUtils;
+import org.springframework.restdocs.constraints.ConstraintDescriptions;
+import org.springframework.restdocs.payload.FieldDescriptor;
+import static org.springframework.restdocs.request.RequestDocumentation.*;
+import static org.springframework.restdocs.snippet.Attributes.key;
+import static org.springframework.restdocs.payload.PayloadDocumentation.*;
+import static org.springframework.restdocs.mockmvc.MockMvcRestDocumentation.document;
+import guru.springframework.msscbeerservice.domain.Beer;
+*/
 
 @ExtendWith(RestDocumentationExtension.class)
 //set uri details if necessary
@@ -154,6 +155,7 @@ class BeerControllerTest {
             .build();
     }
 
+    /*
     private static class ConstrainedFields {
         private final ConstraintDescriptions constraintDescriptions;
 
@@ -167,4 +169,5 @@ class BeerControllerTest {
                             .descriptionsForProperty(path), ". ")));
         }
     }
+    */
 }

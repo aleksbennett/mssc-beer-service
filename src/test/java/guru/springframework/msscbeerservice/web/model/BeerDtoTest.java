@@ -1,9 +1,5 @@
 package guru.springframework.msscbeerservice.web.model;
 
-import java.math.BigDecimal;
-import java.time.OffsetDateTime;
-import java.util.UUID;
-
 public class BeerDtoTest {
     /*
     BeerDto getDto(){

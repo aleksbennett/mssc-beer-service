@@ -1,10 +1,4 @@
 -------------------------------------------------------------------------------
 Test set: guru.springframework.msscbeerservice.DemoApplicationTests
 -------------------------------------------------------------------------------
-Tests run: 1, Failures: 0, Errors: 1, Skipped: 0, Time elapsed: 8.017 s <<< FAILURE! - in guru.springframework.msscbeerservice.DemoApplicationTests
-contextLoads  Time elapsed: 0.003 s  <<< ERROR!
-java.lang.IllegalStateException: Failed to load ApplicationContext
-Caused by: java.lang.IllegalStateException: Failed to introspect Class [guru.springframework.msscbeerservice.web.mappers.BeerMapperImpl] from ClassLoader [jdk.internal.loader.ClassLoaders$AppClassLoader@30946e09]
-Caused by: java.lang.NoClassDefFoundError: LDateMapper;
-Caused by: java.lang.ClassNotFoundException: DateMapper
-
+Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 10.64 s - in guru.springframework.msscbeerservice.DemoApplicationTests

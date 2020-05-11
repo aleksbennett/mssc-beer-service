@@ -1,18 +1,18 @@
 package guru.springframework.msscbeerservice.services.inventory;
 
-import java.util.List;
-import java.util.Objects;
-import java.util.UUID;
-
+import guru.springframework.msscbeerservice.services.inventory.model.BeerInventoryDto;
+import lombok.extern.slf4j.Slf4j;
 import org.springframework.boot.context.properties.ConfigurationProperties;
+import org.springframework.boot.web.client.RestTemplateBuilder;
 import org.springframework.core.ParameterizedTypeReference;
 import org.springframework.http.HttpMethod;
 import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Component;
 import org.springframework.web.client.RestTemplate;
 
-import guru.springframework.msscbeerservice.services.inventory.model.BeerInventoryDto;
-import lombok.extern.slf4j.Slf4j;
+import java.util.List;
+import java.util.Objects;
+import java.util.UUID;
 
 @Slf4j
 @ConfigurationProperties(prefix = "sfg.brewery", ignoreUnknownFields = true)
@@ -24,13 +24,13 @@ public class BeerInventoryServiceRestTemplateImpl implements BeerInventoryServic
 
     private String beerInventoryServiceHost;
 
-    public BeerInventoryServiceRestTemplateImpl(RestTemplate restTemplate) {
-        this.restTemplate = restTemplate;
-    }
-
     public void setBeerInventoryServiceHost(String beerInventoryServiceHost) {
         this.beerInventoryServiceHost = beerInventoryServiceHost;
     }    
+
+    public BeerInventoryServiceRestTemplateImpl(RestTemplateBuilder restTemplateBuilder) {
+        this.restTemplate = restTemplateBuilder.build();
+    }
     
     @Override
     public Integer getOnHandInventory(UUID beerId) {
