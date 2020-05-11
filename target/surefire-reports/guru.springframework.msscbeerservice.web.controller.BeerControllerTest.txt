@@ -1,4 +1,22 @@
 -------------------------------------------------------------------------------
 Test set: guru.springframework.msscbeerservice.web.controller.BeerControllerTest
 -------------------------------------------------------------------------------
-Tests run: 3, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 2.265 s - in guru.springframework.msscbeerservice.web.controller.BeerControllerTest
+Tests run: 3, Failures: 0, Errors: 3, Skipped: 0, Time elapsed: 17.462 s <<< FAILURE! - in guru.springframework.msscbeerservice.web.controller.BeerControllerTest
+updateBeerById  Time elapsed: 0 s  <<< ERROR!
+java.lang.IllegalStateException: Failed to load ApplicationContext
+Caused by: java.lang.IllegalStateException: Failed to introspect Class [guru.springframework.msscbeerservice.web.mappers.BeerMapperImpl] from ClassLoader [jdk.internal.loader.ClassLoaders$AppClassLoader@30946e09]
+Caused by: java.lang.NoClassDefFoundError: LDateMapper;
+Caused by: java.lang.ClassNotFoundException: DateMapper
+
+saveNewBeer  Time elapsed: 0 s  <<< ERROR!
+java.lang.IllegalStateException: Failed to load ApplicationContext
+Caused by: java.lang.IllegalStateException: Failed to introspect Class [guru.springframework.msscbeerservice.web.mappers.BeerMapperImpl] from ClassLoader [jdk.internal.loader.ClassLoaders$AppClassLoader@30946e09]
+Caused by: java.lang.NoClassDefFoundError: LDateMapper;
+Caused by: java.lang.ClassNotFoundException: DateMapper
+
+getBeerById  Time elapsed: 0 s  <<< ERROR!
+java.lang.IllegalStateException: Failed to load ApplicationContext
+Caused by: java.lang.IllegalStateException: Failed to introspect Class [guru.springframework.msscbeerservice.web.mappers.BeerMapperImpl] from ClassLoader [jdk.internal.loader.ClassLoaders$AppClassLoader@30946e09]
+Caused by: java.lang.NoClassDefFoundError: LDateMapper;
+Caused by: java.lang.ClassNotFoundException: DateMapper
+
