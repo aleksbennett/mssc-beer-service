@@ -1,5 +1,6 @@
 package guru.springframework.msscbeerservice.web.model;
 
+import java.io.Serializable;
 import java.util.List;
 
 import com.fasterxml.jackson.annotation.JsonCreator;
@@ -11,6 +12,8 @@ import org.springframework.data.domain.PageRequest;
 import org.springframework.data.domain.Pageable;
 
 public class BeerPagedList extends PageImpl<BeerDto> {
+
+    private static final long serialVersionUID = 495077261093591613L;
 
     @JsonCreator(mode = JsonCreator.Mode.PROPERTIES)
     public BeerPagedList(@JsonProperty("content") List<BeerDto> content,

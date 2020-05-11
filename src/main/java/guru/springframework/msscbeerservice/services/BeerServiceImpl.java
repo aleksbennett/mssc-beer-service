@@ -3,6 +3,7 @@ package guru.springframework.msscbeerservice.services;
 import java.util.UUID;
 import java.util.stream.Collectors;
 
+import org.springframework.cache.annotation.Cacheable;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.PageRequest;
 import org.springframework.stereotype.Service;
@@ -24,9 +25,12 @@ public class BeerServiceImpl implements BeerService {
     private final BeerRepository beerRepository;
     private final BeerMapper beerMapper;
 
-
+    @Cacheable(cacheNames = "beerListCache", condition = "#showInventoryOnHand == false")
     @Override
     public BeerPagedList listBeers(String beerName, BeerStyleEnum beerStyle, Boolean showInventoryOnHand, PageRequest pageRequest) {
+        
+        System.out.println("I was called");
+
         BeerPagedList beerPagedList;
         Page<Beer> beerPage;
 
@@ -65,8 +69,11 @@ public class BeerServiceImpl implements BeerService {
         return beerPagedList;
     }
 
+    @Cacheable(cacheNames = "beerListCache", key = "#beerId", condition = "#showInventoryOnHand == false")
     @Override
     public BeerDto getById(UUID beerId, Boolean showInventoryOnHand) {
+        System.out.println("I was called");
+
         if( showInventoryOnHand ){
             return beerMapper.beerToBeerDtoWithInventory(beerRepository.findById(beerId).orElseThrow(NotFoundException::new));
         } else {
