@@ -1,6 +1,7 @@
 c:\Users\bennetta\VS_Code_Repository\Udemy-Microservices\mssc-beer-service\src\main\java\guru\springframework\msscbeerservice\web\model\BeerStyleEnum.java
 c:\Users\bennetta\VS_Code_Repository\Udemy-Microservices\mssc-beer-service\src\main\java\guru\springframework\msscbeerservice\services\inventory\model\BeerInventoryDto.java
 c:\Users\bennetta\VS_Code_Repository\Udemy-Microservices\mssc-beer-service\src\main\java\guru\springframework\msscbeerservice\web\mappers\DateMapper.java
+c:\Users\bennetta\VS_Code_Repository\Udemy-Microservices\mssc-beer-service\src\main\java\guru\springframework\msscbeerservice\config\CacheConfig.java
 c:\Users\bennetta\VS_Code_Repository\Udemy-Microservices\mssc-beer-service\src\main\java\guru\springframework\msscbeerservice\services\BeerServiceImpl.java
 c:\Users\bennetta\VS_Code_Repository\Udemy-Microservices\mssc-beer-service\src\main\java\guru\springframework\msscbeerservice\web\controller\NotFoundException.java
 c:\Users\bennetta\VS_Code_Repository\Udemy-Microservices\mssc-beer-service\src\main\java\guru\springframework\msscbeerservice\web\controller\MvcExceptionHandler.java

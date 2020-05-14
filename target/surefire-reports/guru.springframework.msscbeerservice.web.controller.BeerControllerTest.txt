@@ -1,18 +1,18 @@
 -------------------------------------------------------------------------------
 Test set: guru.springframework.msscbeerservice.web.controller.BeerControllerTest
 -------------------------------------------------------------------------------
-Tests run: 3, Failures: 0, Errors: 3, Skipped: 0, Time elapsed: 9.713 s <<< FAILURE! - in guru.springframework.msscbeerservice.web.controller.BeerControllerTest
+Tests run: 3, Failures: 0, Errors: 3, Skipped: 0, Time elapsed: 14.05 s <<< FAILURE! - in guru.springframework.msscbeerservice.web.controller.BeerControllerTest
 updateBeerById  Time elapsed: 0.001 s  <<< ERROR!
 java.lang.IllegalStateException: Failed to load ApplicationContext
 Caused by: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'beerMapperImpl': Unsatisfied dependency expressed through method 'setBeerInventoryService' parameter 0; nested exception is org.springframework.beans.factory.NoSuchBeanDefinitionException: No qualifying bean of type 'guru.springframework.msscbeerservice.services.inventory.BeerInventoryService' available: expected at least 1 bean which qualifies as autowire candidate. Dependency annotations: {}
 Caused by: org.springframework.beans.factory.NoSuchBeanDefinitionException: No qualifying bean of type 'guru.springframework.msscbeerservice.services.inventory.BeerInventoryService' available: expected at least 1 bean which qualifies as autowire candidate. Dependency annotations: {}
 
-saveNewBeer  Time elapsed: 0.001 s  <<< ERROR!
+saveNewBeer  Time elapsed: 0 s  <<< ERROR!
 java.lang.IllegalStateException: Failed to load ApplicationContext
 Caused by: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'beerMapperImpl': Unsatisfied dependency expressed through method 'setBeerInventoryService' parameter 0; nested exception is org.springframework.beans.factory.NoSuchBeanDefinitionException: No qualifying bean of type 'guru.springframework.msscbeerservice.services.inventory.BeerInventoryService' available: expected at least 1 bean which qualifies as autowire candidate. Dependency annotations: {}
 Caused by: org.springframework.beans.factory.NoSuchBeanDefinitionException: No qualifying bean of type 'guru.springframework.msscbeerservice.services.inventory.BeerInventoryService' available: expected at least 1 bean which qualifies as autowire candidate. Dependency annotations: {}
 
-getBeerById  Time elapsed: 0.001 s  <<< ERROR!
+getBeerById  Time elapsed: 0 s  <<< ERROR!
 java.lang.IllegalStateException: Failed to load ApplicationContext
 Caused by: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'beerMapperImpl': Unsatisfied dependency expressed through method 'setBeerInventoryService' parameter 0; nested exception is org.springframework.beans.factory.NoSuchBeanDefinitionException: No qualifying bean of type 'guru.springframework.msscbeerservice.services.inventory.BeerInventoryService' available: expected at least 1 bean which qualifies as autowire candidate. Dependency annotations: {}
 Caused by: org.springframework.beans.factory.NoSuchBeanDefinitionException: No qualifying bean of type 'guru.springframework.msscbeerservice.services.inventory.BeerInventoryService' available: expected at least 1 bean which qualifies as autowire candidate. Dependency annotations: {}
